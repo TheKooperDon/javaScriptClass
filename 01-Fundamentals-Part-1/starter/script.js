@@ -212,6 +212,23 @@ const description1 = country + ' ' + 'is in ' + continent + ', and its ' + ' ' +
 console.log(description1);
 
 
+// done
+
+
+let z, j;
+
+z = j = 25 - 10 - 5;
+// z = j = 10, so z = 10 and j = 10 is how this is read.
+//stuff like this is usally read to right to left. cuz the cp wouldnt get how to read the letter first. 
+
+console.log(z, j);
+
+const averageAge = (ageJeff + ageMichelle) / 2 //div happens before subtraction
+console.log(ageJeff, ageMichelle, averageAge)
+
+
+
+
 
 
 
