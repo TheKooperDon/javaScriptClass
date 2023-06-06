@@ -30,4 +30,10 @@ const BMIJohn = massJohn / (heightJohn * heightJohn); // do heightJohn ** since 
 console.log(BMIMark, BMIJohn);
 
 let markHigherBMI = (BMIMark > BMIJohn);
-console.log(markHigherBMI)
+console.log(markHigherBMI);
+
+
+
+
+
+
