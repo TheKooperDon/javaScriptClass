@@ -214,6 +214,7 @@ console.log(description1);
 
 // done
 
+//video 15
 
 let z, j;
 
@@ -227,7 +228,29 @@ const averageAge = (ageJeff + ageMichelle) / 2 //div happens before subtraction
 console.log(ageJeff, ageMichelle, averageAge)
 
 
+//VIDEO 17
 
+const job3 = 'student';
+const year1 = 2030;
+
+const name2 = "I'm " + firstName + ', a ' + (year1 - birthYear) + ' years old ' + job3 + '!';
+console.log(name2);
+
+const name2New = `I'm ${firstName}, a ${year1 - birthYear} year old ${job3}!`;//this is alot better then doing + '' and keeps it all in one '' instead. TBH its a lot better as you see the string like this. Big fan. 
+
+// `` you can use these for any string too. just saying.
+//he said alot of devs just do `` like for everything. 
+
+
+console.log('String with \n\
+multiple \n\
+lines')
+
+//but with `` you dont have to do the \n\ just enter works
+
+console.log(`String
+multiple
+lines`)
 
 
 /*
@@ -237,5 +260,23 @@ LECTURE: Strings and Template Literals
 Recreate the 'description' variable from the last assignment, this time using the template literal syntax
 
 */
+
+const description2 = `${country} is in ${continent} and its ${population} million people speak ${mainLanguage}.`;
+
+console.log(description2);
+
+
+//country + ' ' + 'is in ' + continent + ', and its ' + ' ' + population + ' ' + ' million people speak ' + mainLanguage;
+
+
+//done
+
+
+//Video 18
+
+
+
+
+/* */
 
 
