@@ -420,6 +420,48 @@ if (nothing) {
 
 //video 22
 
+const age22 = '18'; //if you do the '' then just the loose one appears cuz its in the '' === means like it must be that exactly. 
+
+if (age22 === 18) console.log(`You are an adult. strict`); //strict
+
+if (age22 == 18) console.log(`You are an adult. loose`); //loose
+
+// is a comparsion . not just = is like equals.
+
+//dont do  == do strict mainly
+
+
+
+
+/*const fav = Number(prompt(`yo whats your fav number?`));
+
+console.log(fav);
+
+console.log(typeof fav);
+
+if (fav === 23) {
+    console.log(`23 is bigger then 21.`)
+} else if (fav === 7) {
+    console.log(`7 is cool`)
+} else {
+    console.log(`wrong number fool`)
+}
+
+if (fav !== 23) {
+    console.log(`why not 23?`) //if you do 7 it still says 7 is cool and not wrong number but its like why not 23.
+}
+
+*/
+
+
+
+
+
+
+//this is super cool cuz now you can store stuff in a var by the user no sql.
+
+//this is good to make sure if like they dont put a name, or empty etc..
+
 /*
 LECTURE: Equality Operators: == vs. ===
 
@@ -438,17 +480,70 @@ Use an else-if block to log 'More than 1 border' in case 'numNeighbours' is grea
 4.
 Use an else block to log 'No borders' (this block will be executed when 'numNeighbours' is 0 or any other value)
 
-5. 
+5.
 Test the code with different values of 'numNeighbours', including 1 and 0.
 
-6. 
+6.
 Change == to ===, and test the code again, with the same values of 'numNeighbours'. Notice what happens when there is exactly 1 border! Why is this happening?
 
 
 7.
 Finally, convert 'numNeighbours' to a number, and watch what happens now when you input 1
 
-8. 
+8.
 Reflect on why we should use the === operator and type conversion in this situation
+
+
+
+const numNeighbors1 = Number(prompt(`How many neighbour countries does your country
+have?`));
+
+
+if (numNeighbors1 === 1) {
+    console.log(`Only 1 border!`);
+} else if (numNeighbors1 >= 2) {
+    console.log(`More than 1 border`)
+} else {
+    console.log(`No borders`)
+}
+
+*/
+
+
+
+//done
+
+
+//video 23
+
+const ageExampleVideo23 = 16
+
+
+
+//video 24
+
+//were talking about & and or for if else true or false statments
+
+
+/*
+LECTURE: Logical Operators
+
+1. 
+Comment out the previous code so the prompt doesn't get in the way
+
+2. 
+Let's say Sarah is looking for a new country to live in. She wants to live in a
+country that speaks english, has less than 50 million people and is not an island.
+
+3.
+Write an if statement to help Sarah figure out if your country is right for her.
+You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary.
+
+4. 
+If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :('
+
+5. 
+Probably your country does not meet all the criteria. So go back and temporarily
+change some variables in order to make the condition true (unless you live in Canada :D)
 
 */
