@@ -322,3 +322,133 @@ if (population >= 33000000) {
 
 
 
+
+//video 20
+
+
+const inputYear = '1996';
+console.log(Number(inputYear));//this helps change the string change to a number
+console.log(inputYear + 18)
+console.log(Number(inputYear) + 18);
+console.log(Number(firstName) + 18); //NAN = not a number
+console.log(typeof NaN);
+console.log(typeof 13);
+console.log(String(23), 23) //
+
+console.log(`I am ` + 23 + ` years old`);
+console.log(`I am ` + String(23) + ` years old`);
+
+/* 
+1.
+Predict the result of these 5 operations without executing them:
+'9' - '5'; = 4
+'19' - '13' + '17'; = 617
+'19' - '13' + 17; = 23
+'123' < 57; false or undefined
+5 + 6 + '4' + 9 - 4 - 2; = 1143
+2. Execute the operations to check if you were right
+
+*/
+
+console.log('9' - '5'); //4
+console.log('19' - '13' + '17'); //617 number
+console.log('19' - '13' + 17); //23
+console.log('123' < 57); //false
+console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
+console.log(`11` + `12`)
+
+//boom i got them right but this makes alot of things into a string.
+
+// using minus will do normal math.
+
+// a plus with a string will just combine the two
+// example of plus '11'+'12' would be 1112 not 23.
+
+
+//done
+
+//video 21
+
+
+//false will be 0 '' undefined null NAN
+console.log(Boolean(0));
+
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+//all false ^
+//it just cant be empty
+
+console.log(Boolean(`hi`));
+console.log(Boolean(population));
+console.log(Boolean(21));
+
+//^ will be true. 
+
+const money = 0;
+
+//see how money will make it true because it needs a if true statement but its 0 so its false. 
+//if you change it to literally any number like 1 2 3 4 it will just be true. 
+if (money) {
+    console.log(`Don't spend it all ;`);
+
+} else {
+    console.log(`Get a job`)
+}
+
+
+//another example. 
+
+let nothing; // since its undefined. then the same thing happens. 
+
+if (nothing) {
+    console.log('it cant be nothing')
+} else {
+    console.log(`nothing is nothing dude`)
+}
+
+let nothing0 = 0; // since its 0. then the same thing happens. 
+
+if (nothing) {
+    console.log('it cant be nothing')
+} else {
+    console.log(`nothing is nothing dude`)
+}
+
+//done
+
+//video 22
+
+/*
+LECTURE: Equality Operators: == vs. ===
+
+
+1.
+Declare a variable 'numNeighbours' based on a prompt input like this: prompt('How many neighbour countries does your country
+have?');
+
+
+2.
+If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now)
+
+3.
+Use an else-if block to log 'More than 1 border' in case 'numNeighbours' is greater than 1
+
+4.
+Use an else block to log 'No borders' (this block will be executed when 'numNeighbours' is 0 or any other value)
+
+5. 
+Test the code with different values of 'numNeighbours', including 1 and 0.
+
+6. 
+Change == to ===, and test the code again, with the same values of 'numNeighbours'. Notice what happens when there is exactly 1 border! Why is this happening?
+
+
+7.
+Finally, convert 'numNeighbours' to a number, and watch what happens now when you input 1
+
+8. 
+Reflect on why we should use the === operator and type conversion in this situation
+
+*/
