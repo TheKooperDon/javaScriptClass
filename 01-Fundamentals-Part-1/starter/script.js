@@ -31,7 +31,7 @@ assign their values according to your own country (population in millions)
 
 let country = 'USA';
 let continent = 'North America';
-let population = '332000000';
+let population = 332000000;
 
 console.log(country);
 console.log(continent);
@@ -274,9 +274,51 @@ console.log(description2);
 
 //Video 18
 
+const age18 = 15;
+
+const isOldEnough = age18 >= 15;
+
+if (age18 >= 18) {
+    console.log(`Sarah can start to get her drivers license.`)
+} else {
+    const yearsLeft = 18 - age18;
+    console.log(`She is not old enough. Wait another ${yearsLeft} years.`)
+}
+//love this ^ this is a cool console log using the var in the log.
+
+//whats nice about stuff in if else statements is that {} stuff inside makes it controlled. 
+
+
+const birthYear18 = 1996;
+let century;
+
+if (birthYear18 <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century)
 
 
 
-/* */
+
+
+/* 
+LECTURE: Taking Decisions: if / else Statements
+1.
+If your country's population is greater that 33 million, log a string like this to the console: 'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22 million below average' (the 22 is the average of 33 minus the country's population)
+
+2.
+ After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original
+*/
+if (population >= 33000000) {
+    console.log(`${country}'s population is above average.`)
+} else {
+    console.log(`${country}'s population is ${33000000 - population} million below average`)
+}
+
+//done
+
 
 
