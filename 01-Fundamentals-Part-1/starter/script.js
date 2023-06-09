@@ -516,13 +516,43 @@ if (numNeighbors1 === 1) {
 
 //video 23
 
-const ageExampleVideo23 = 16
+//const ageExampleVideo23 = 16
+
+//were talking about & and or for if else true or false statements
 
 
 
 //video 24
 
-//were talking about & and or for if else true or false statments
+let hasDriversLicense = true; //A
+let hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); //this is true if both true 
+
+hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision); //now its false cuz one is false
+
+
+console.log(hasDriversLicense || hasGoodVision); // true cuz one is . || means or
+
+console.log(!hasDriversLicense); //! inverts it . to false. 
+
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive) {
+    console.log(`Sarah can drive`);
+} else {
+    console.log(`Someone else should drive...`);
+}
+
+//would be false
+
+const isTired = true;
+
+console.log(hasDriversLicense | hasGoodVision || isTired);
+
 
 
 /*
