@@ -540,18 +540,27 @@ console.log(!hasDriversLicense); //! inverts it . to false.
 
 
 const shouldDrive = hasDriversLicense && hasGoodVision;
-
+/*
 if (shouldDrive) {
     console.log(`Sarah can drive`);
 } else {
     console.log(`Someone else should drive...`);
 }
 
+*/
+
 //would be false
 
 const isTired = true;
 
-console.log(hasDriversLicense | hasGoodVision || isTired);
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+
+if (hasDriversLicense && hasGoodVision && !isTired) /*and not tired. Good when you need no to be the yes. Because true doesnt mean yes and false tho*/ {
+    console.log(`Sarah can drive`);
+} else {
+    console.log(`Someone else should drive...`);
+}
 
 
 
@@ -577,3 +586,21 @@ Probably your country does not meet all the criteria. So go back and temporarily
 change some variables in order to make the condition true (unless you live in Canada :D)
 
 */
+
+const newCountry = 'Mexico';
+const newCountryPopulationBiggerThan30mil = true;
+const isnewLanguageEnglish = true;
+const isIsland2 = false;
+
+if (newCountryPopulationBiggerThan30mil && isnewLanguageEnglish && !isIsland2) {
+    console.log(`You found your magic place called Mexico`)
+} else {
+    console.log(`This ${country} aint the place.`)
+}
+//this wasnt the idea of the assignment but same idea. 
+
+
+//done
+
+
+
