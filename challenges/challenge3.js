@@ -106,3 +106,6 @@ if (scoreDolphins > scoreKoalas && (scoreDolphins || scoreKoalas >= 100)) {
 } else {
     console.log(`Koalas win the trophy`)
 }
+
+
+//hell yea 
