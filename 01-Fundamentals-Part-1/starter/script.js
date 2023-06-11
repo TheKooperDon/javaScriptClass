@@ -602,17 +602,115 @@ if (newCountryPopulationBiggerThan30mil && isnewLanguageEnglish && !isIsland2) {
 
 //done
 
+//video 26
 
+
+const videoDay26 = `friday`
+
+switch (videoDay26) {
+    case `monday`: //day === monday 
+        console.log(`Plan course structure`);
+        console.log(`Go to coding meetup`);
+        break;
+    case `tuesday`:
+        console.log(`Prepare for job interview`);
+        break;
+    case `wednesday`:
+    case `thursday`:
+    case `friday`:
+        console.log(`weekend starts`);
+        break;
+    case `saturday`:
+        console.log(`party starts now. `)
+    case `sunday`:
+        console.log(`the lords day`)
+        break;
+    default:
+        console.log(`theres only 7 day of the week`)
+
+}
+
+if (videoDay26 === 'monday') {
+    console.log(`Plan course structure`);
+    console.log(`Go to coding meetup`);
+} else if (videoDay26 === `tuesday`) {
+    console.log(`its tues`);
+} else if (videoDay26 === `wednesday`) {
+    console.log(`wed`)
+} else if (videoDay26 === `thrusday`) {
+    console.log(`thrus`)
+} else if (videoDay26 === `friday`) {
+    console.log(`fri`)
+} else if (videoDay26 === `saturday`) {
+    console.log(`sat`)
+} else if (videoDay26 === `sunday`) {
+    console.log(`sun`)
+} else {
+    console.log(`invalid day`)
+}
+
+// this is more ugly but the switch statement is being less used
+
+
+
+//if you dont put a break it will keep going to the next day. or the next case.
 
 /*
+
+LECTURE: The switch Statement
+1. Use a switch statement to log the following string for the given 'language':
+chinese or mandarin: 'MOST number of native speakers!'
+spanish: '2nd place in number of native speakers'
+english: '3rd place'
+hindi: 'Number 4'
+arabic: '5th most spoken language'
+for all other simply log 'Great language too :D'
 
 
 */
 
 
 
-/*
+const challenge26lan = `english`;
 
+switch (challenge26lan) {
+    case `mandarin`: //this is like chinese or mandarin will work duh 
+    case `chinese`:
+        console.log(`MOST number of native speakers!`);
+        break;
+    case `spanish`:
+        console.log(`2nd place in number of native speakers`);
+        break;
+    case `english`:
+        console.log(`3rd place`);
+        break;
+    case `hindi`:
+        console.log(`Number 4`)
+    case `arabic`:
+        console.log(`5th most spoken language`)
+        break;
+    default:
+        console.log(`Great language too :D`)
+
+}
+
+//done yay
+
+
+//video 27
+
+
+
+//video 28
+
+/*
+LECTURE: The Conditional (Ternary) Operator
+1. If your country's population is greater than 33 million, use the ternary operator
+to log a string like this to the console: 'Portugal's population is above average'.
+Otherwise, simply log 'Portugal's population is below average'. Notice how only
+one word changes between these two sentences!
+2. After checking the result, change the population temporarily to 13 and then to
+130. See the different results, and set the population back to original
 
 */
 
