@@ -1,4 +1,4 @@
-
+/*
 
 let scoreDolphins = ((96 + 108 + 89) / 3);
 let scoreKoalas = ((88 + 91 + 110) / 3);
@@ -40,3 +40,13 @@ if (scoreDolphins > scoreKoalas && (scoreDolphins || scoreKoalas >= 100)) {
 } else {
     console.log(`Koalas win the trophy`)
 }
+
+*/
+
+
+function toCamelCase(str) {
+
+    const stringToLetters = str.split("the-stealth-warrior");
+    console.log(stringToLetters);
+}
+
