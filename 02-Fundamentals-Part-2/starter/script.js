@@ -44,9 +44,4 @@ if (scoreDolphins > scoreKoalas && (scoreDolphins || scoreKoalas >= 100)) {
 */
 
 
-function toCamelCase(str) {
-
-    const stringToLetters = str.split("the-stealth-warrior");
-    console.log(stringToLetters);
-}
 
