@@ -699,10 +699,21 @@ switch (challenge26lan) {
 
 //video 27
 
+if (23 > 10) {
+    const str = `23 is bigger`;
+}
+
+console.log(`I am ${2037 - 1234} years old`); //works
+// console.log(`I am ${if (dasjfh) {}} years old`); //does not work. 
 
 
 //video 28
+const videoAge28 = 27;
+videoAge28 >= 18 ? console.log(`you can drink wine if you are not in the USA`) : console.log(`drink water loser`);/* if block with ? else blick is :*/
+const drink = videoAge28 >= 18 ? `wine` : `water`;
+console.log(`I like to drink `)
 
+console.log(`I like to drink ${videoAge28 >= 28 ? `wine` : `water`} `)
 /*
 LECTURE: The Conditional (Ternary) Operator
 1. If your country's population is greater than 33 million, use the ternary operator
@@ -713,6 +724,14 @@ one word changes between these two sentences!
 130. See the different results, and set the population back to original
 
 */
+
+console.log(`${country} is ${population >= 33000000 ? `above average` : `isbelow average`}`);
+
+//i always forget about the damn pop again. But i did learn this.
+//you can do if else to work inside of a ${} with the shorthand. not an if else.
+
+//video 30
+
 
 
 
