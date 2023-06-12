@@ -1,4 +1,34 @@
 //video 32
+// scrict mode is more secure ha. 
+
+'use strict';
+
+//let hasDriversLicense = false;
+
+//let passTest = true;
+
+//if (passTest) hasDriverLicense = true;
+//if (hasDriversLicense) console.log(`I can drive! `);
+
+//const interface = `Audio`
+//cant use interface because they are saving it
+//same with private.
+//ex const if = 23 . cant use if like that.
+
+
+
+//without strict it just wont appear.
+//with it. It will get an error saying its not defined.
+
+
+
+
+//video 33 
+
+
+
+
+
 
 
 /*
