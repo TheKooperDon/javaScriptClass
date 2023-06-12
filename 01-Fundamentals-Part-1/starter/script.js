@@ -732,49 +732,5 @@ console.log(`${country} is ${population >= 33000000 ? `above average` : `isbelow
 
 //video 30
 
-
-
-
-/*
-
-
-*/
-
-
-/*
-
-
-*/
-
-
-/*
-
-
-*/
-
-
-/*
-
-
-*/
-
-
-/*
-
-
-*/
-
-/*
-
-
-*/
-
-/*
-
-
-*/
-
-/*
-
-
-*/
+//js is not java and jquery is not js.
+//they just did that to be cool and sound good.
