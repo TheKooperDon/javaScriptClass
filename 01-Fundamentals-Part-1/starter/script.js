@@ -711,7 +711,7 @@ console.log(`I am ${2037 - 1234} years old`); //works
 const videoAge28 = 27;
 videoAge28 >= 18 ? console.log(`you can drink wine if you are not in the USA`) : console.log(`drink water loser`);/* if block with ? else blick is :*/
 const drink = videoAge28 >= 18 ? `wine` : `water`;
-console.log(`I like to drink `)
+console.log(`I like to drink `);
 
 console.log(`I like to drink ${videoAge28 >= 28 ? `wine` : `water`} `)
 /*

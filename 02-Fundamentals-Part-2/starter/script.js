@@ -51,7 +51,7 @@ console.log(fruitProcessor(5, 5)); //this also print that juice line.
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
-// again little confusing but mainly its just the infor for the parameters. but console.loging it actaully showsit. 
+// again little confusing but mainly its just the infor for the parameters. but console.loging it actaully shows  it. 
 //sounds like return lets you use the variable in other places
 
 

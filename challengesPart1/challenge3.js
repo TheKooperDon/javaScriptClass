@@ -148,7 +148,7 @@ if (scoreDolphins > scoreKoalas && (scoreDolphins || scoreKoalas >= 100)) {
 } else if ((scoreDolphins > 100) && (scoreKoalas > 100) && (scoreDolphins === scoreKoalas)) {
     console.log(`Both win the trophy and its over 100`)
 } else {
-    console.log(`Koalas win the trophy`)
+    console.log(`no one scored over a 100`)
 }
 
 
