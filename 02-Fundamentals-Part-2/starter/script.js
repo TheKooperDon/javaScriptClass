@@ -25,9 +25,34 @@
 
 //video 33 
 
+function logger() {
+    console.log(`My name is Jonas`);
+}
 
 
+//calling  / running / invoking
+logger();//printed the phrase jonas. 
+logger();
+logger(23);//doesnt do anyhting when you do that 
 
+function fruitProcessor(apples, oranges) {
+    console.log(apples, oranges);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges. `;
+    return juice;//returned it back to the result. 
+}
+
+fruitProcessor(2, 0)
+
+const appleJuice = fruitProcessor(2, 0);
+console.log(appleJuice); //this is so confusing on why now it prints juice but okay. 
+
+console.log(fruitProcessor(5, 5)); //this also print that juice line. 
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+// again little confusing but mainly its just the infor for the parameters. but console.loging it actaully showsit. 
+//sounds like return lets you use the variable in other places
 
 
 
@@ -39,6 +64,78 @@ Write a function called 'describeCountry' which takes three parameters: 'country
 Call this function 3 times, with input data for 3 different countries. Store the returned values in 3 different variables, and log them to the console
 
 */
+
+function describeCountry(country, population, capitalCity) {
+    return `${country} has ${population} million people and its capital city is ${capitalCity}.`
+
+    //again you do a return here. 
+
+}
+
+describeCountry(`USA`, 300, `DC`);
+
+const myCountry = describeCountry(`USA`, 300, `DC`);
+
+//the min I did a return. These 2 ^ dont show up anymore. Which is nuts
+
+console.log(myCountry);
+
+const bigCountry = describeCountry(`Mexixo`, 300, `mex`);
+console.log(bigCountry)
+
+const countryTime = describeCountry(`Canada`, 3012, `Can`);
+console.log(countryTime)
+
+//now it shows up.
+//so confusing .
+//please make more sense. so used to console.logging stuff
+//done
+
+
+//video 34
+
+// function declaration
+function calcAge1(birthYear) {
+    /*
+    const age = 2023 - birthYear;
+    return age; //to get it out of the function 
+
+    lol nvm you dont need to this with returns cuz you can 
+    do this. 
+    */
+    return 2023 - birthYear;
+
+}
+
+//lets call it now
+
+calcAge1(1996); //this will create a value. 
+
+//but we need to SAVE it. 
+
+const age1 = calcAge1(1996);
+console.log(age1);
+
+
+
+//this is hidden function 
+//function expression
+const calcAge2 = function (birthYear) {
+
+    return 2023 - birthYear;
+
+}
+
+const age2 = calcAge2(1996);
+
+console.log(age1, age2);
+
+//you can put a function dec before the calling but wouldnt do it . 
+
+
+
+
+
 
 
 /*
@@ -55,6 +152,30 @@ Create a function expression which does the exact same thing, called 'percentage
 
 */
 
+function percentageOfWorld1(population, country) {
+    return `${country} has ${population} people, so its about ${population / 7900 * 100} `
+}
+const testChinaCountry = percentageOfWorld1(1441, `China`);
+const testCountry1 = percentageOfWorld1(300, `USA`);
+const testCountry2 = percentageOfWorld1(4, `Tiny World`);
+console.log(testChinaCountry);
+console.log(testCountry1);
+console.log(testCountry2);
+
+
+const percentageOfWorld2 = function (population, country) {
+    return `${country} has ${population} people, so its about ${population / 7900 * 100} `
+}
+
+const testChinaCountry1 = percentageOfWorld1(1441, `China`);
+const testCountry3 = percentageOfWorld1(300, `USA`);
+const testCountry4 = percentageOfWorld1(4, `Tiny World`);
+console.log(testChinaCountry1);
+console.log(testCountry3);
+console.log(testCountry4);
+//ha mine is fancier then the answer
+
+//did it right. cool ! 
 
 /*
 
@@ -183,7 +304,3 @@ Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing
 Reflect on what solution you like better for this task: the for loop or the while loop?
 
 */
-
-
-
-
