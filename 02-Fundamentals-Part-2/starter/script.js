@@ -164,7 +164,7 @@ console.log(testCountry2);
 
 
 const percentageOfWorld2 = function (population, country) {
-    return `${country} has ${population} people, so its about ${population / 7900 * 100} `
+    return `${country} has ${population} million people, so its about ${population / 7900 * 100} `
 }
 
 const testChinaCountry1 = percentageOfWorld1(1441, `China`);
@@ -175,8 +175,49 @@ console.log(testCountry3);
 console.log(testCountry4);
 //ha mine is fancier then the answer
 
-//did it right. cool ! 
+//did it right. cool !
 
+
+//video 35 Arrow Functions
+
+//another way to make a function with a const
+const calcAge3 = function (birthYearVideo35) {
+    return 2023 - birthYearVideo35;
+}
+
+/*
+creates function name with const with calcAge4
+then you do what you want which is birth yearVideo35
+=> is what happens with the fuction
+
+*/
+const calcAge4 = birthYearVideo35 => 2023 - birthYearVideo35;
+
+const age3 = calcAge4(1996);
+console.log(age3);
+
+//const yearsUntilRetirement = function name
+// = = (birthYearVideo35, firstName) what goes in the function
+// => means function 
+// put stuff that you want the function to do
+//still need a return if its one thing. 
+const yearsUntilRetirement = (birthYearVideo35, firstName) => {
+    const age4 = 2023 - birthYearVideo35;
+    const retirement = 65 - age4;
+    //return retirement;
+    return `${firstName} retires in ${retirement}`
+}
+
+console.log(yearsUntilRetirement(1996, `Jeff`));
+
+//make variable name with const
+//put thing in function()
+//=> is now function maker and this thing  {}
+//50 - daysTillLeaseEnds; is what the function does
+const jeffFunction = daysTillLeaseEnds => 50 - daysTillLeaseEnds;
+
+const jeffTestFunction = jeffFunction(48);
+console.log(jeffTestFunction)
 /*
 
 LECTURE: Arrow Functions
@@ -184,6 +225,15 @@ LECTURE: Arrow Functions
 Recreate the last assignment, but this time create an arrow function called 'percentageOfWorld3'
 
 */
+
+const percentageOfWorld3 = (population, country) => {
+    const newPopMath = (population / 7900) * 100;
+    return `${country} has ${population} million  people, so its about ${newPopMath} percent `
+}
+
+console.log(percentageOfWorld3(300, `usa`));
+console.log(percentageOfWorld3(532, `usaadfasfa`));
+
 
 
 /*
