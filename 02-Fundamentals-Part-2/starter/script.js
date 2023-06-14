@@ -80,11 +80,13 @@ const myCountry = describeCountry(`USA`, 300, `DC`);
 
 console.log(myCountry);
 
-const bigCountry = describeCountry(`Mexixo`, 300, `mex`);
+const bigCountry = describeCountry(`Mexico`, 300, `mex`);
 console.log(bigCountry)
 
 const countryTime = describeCountry(`Canada`, 3012, `Can`);
 console.log(countryTime)
+
+
 
 //now it shows up.
 //so confusing .
@@ -106,6 +108,7 @@ function calcAge1(birthYear) {
     return 2023 - birthYear;
 
 }
+
 
 //lets call it now
 
@@ -205,7 +208,7 @@ const yearsUntilRetirement = (birthYearVideo35, firstName) => {
     const age4 = 2023 - birthYearVideo35;
     const retirement = 65 - age4;
     //return retirement;
-    return `${firstName} retires in ${retirement}`
+    return `${firstName} retires in ${retirement}`;
 }
 
 console.log(yearsUntilRetirement(1996, `Jeff`));
@@ -228,12 +231,16 @@ Recreate the last assignment, but this time create an arrow function called 'per
 
 const percentageOfWorld3 = (population, country) => {
     const newPopMath = (population / 7900) * 100;
-    return `${country} has ${population} million  people, so its about ${newPopMath} percent `
+    return `${country} has ${population} million  people, so its about ${newPopMath} percent `;
 }
 
 console.log(percentageOfWorld3(300, `usa`));
 console.log(percentageOfWorld3(532, `usaadfasfa`));
 
+
+
+
+//done 
 
 
 /*
