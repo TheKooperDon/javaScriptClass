@@ -240,7 +240,31 @@ console.log(percentageOfWorld3(532, `usaadfasfa`));
 
 
 
-//done 
+//done
+
+//video 36  Functions Calling Other Functions
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+
+//if we look at the fruitProcesser we did
+//we can see that we did the same thing but now we printing the pieces with a new function.
+//so we need to put the function that used apples and oranges to cut them. and the  `` has new info.
+//its kind of like how p5 draw you can do functions inside of draw 
+
+
+function fruitProcessor36(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} pieces oranges.`
+    return juice;
+}
+
+fruitProcessor36(2, 3);
+console.log(fruitProcessor36(2, 3));
+
+
 
 
 /*
@@ -255,6 +279,58 @@ To calculate the percentage, 'describePopulation' call the
 Call 'describePopulation' with data for 3 countries of your choice
 
 */
+
+
+
+//fyi this how the percertageOfWorld was supposed to be the whole time. 
+//so we make it here first
+const percentageOfWorld4 = population => population / 7900 * 100;
+//then we do the same thing we ahve been doing. But the matt for the % is already done. 
+const describePopulation36 = (country, population) => {
+    const pop = percentageOfWorld4(population)
+    return `${country} has ${population} million people, which is about ${pop}% of the world.`
+}
+const popTest = describePopulation36(`USA`, 300);
+console.log(popTest);
+
+//function inssidee of a function
+//i am a genius
+// done
+
+//video 37 Function review
+const calcAge5 = function (birthYear) {
+    return 2023 - birthYear;
+}
+
+//RETURN ENDS IT IF YOU USE IT SO YOU GOTTA BE BETTER WITH IT ON WHERE YOU PLACE IT. 
+const yearsUntilRetirement37 = function (birthYear, firstName) {
+    const age = calcAge5(birthYear);
+    const retirement = 65 - age;
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years `);
+        return retirement;
+        //console.log(`${firstName} retires in ${retirement} years `);
+        //doesnt work cuz its not above the return 
+    } else {
+        console.log(`${firstName} has already retired`);
+        return -1;
+        //console.log(`${firstName} has already retired`);
+    }
+
+    /*
+    const age = 2023 - birthYear;
+    const retirement = 65 - age;
+    //return retirement;
+    */
+    //return `${firstName} retires in ${retirement}`;
+}
+const testFunction2 = yearsUntilRetirement37(1996, `Jeff`);
+console.log(testFunction2);
+console.log(yearsUntilRetirement37(1950, `Fred`));
+
+console.log(`test`);
+
+//video 37 Function done.
 
 
 /*
