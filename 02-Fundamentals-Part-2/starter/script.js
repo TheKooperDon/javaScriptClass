@@ -331,10 +331,62 @@ console.log(yearsUntilRetirement37(1950, `Fred`));
 console.log(`test`);
 
 //video 37 Function done.
-//challenge 5 done 
+//challenge 5 done
+
+
+//arrays video 39
+
+const friend1 = `Jeff`;
+const friend2 = `Lino`;
+const friend3 = `Michelle`;
+
+//more common 
+const friends = [`Jeff`, `Lino`, `Michelle`]
+console.log(friends);
+
+//less common
+const years = new Array(1991, 1992, 1993, 1994, 1995);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends.length - 2);
+
+//you can change the const info. but not like the actual name for it.
+friends[2] = 'Jay';
+console.log(friends);
+
+const jonas = [`jonas`, `blah`, 2000 - 1000, `teacher`, friends]
+
+console.log(jonas);
+console.log(jonas.length);
+//cant do this
+//friends = ['bob', 'aclice']
+//needs to be like a proper array change, 
+
+const calcAge6 = function (birthYear) {
+    return 2023 - birthYear;
+}
+
+const years39 = [1996, 1967, 2002, 2010, 2018]
+
+//cant really do this.
+//calcAge6(years39)
+
+//you gotta do this
+const ager1 = calcAge6(years39[0]);
+const ager2 = calcAge6(years39[1]);
+const ager3 = calcAge6(years39[years.length - 1]);
+console.log(ager1, ager2, ager3);
+
+
+const ages = [calcAge6(years39[0]), calcAge6(years39[1]), calcAge6(years39[years39.length - 1])];
+console.log(ages);
+
 
 
 /*
+video 39
 LECTURE: Introduction to Arrays
 1. 
 Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'
@@ -345,6 +397,32 @@ Log to the console whether the array has 4 elements or not (true or false)
 Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
 
 */
+
+
+const arrayPopulation = [300, 10, 225, 500];
+const arrayCountry = [`USA`, `Mexico`, `Cananda`, `North Korea`];
+
+
+if (arrayPopulation.length === 4) {
+    console.log(true)
+} else {
+    console.log(false)
+}
+// ORRRRRR
+
+console.log(arrayPopulation.length === 4);
+
+/*
+const percentages = [percentageOfWorld4(arrayPopulation[0]), percentageOfWorld4(arrayPopulation[1]), percentageOfWorld4(arrayPopulation[2]), percentageOfWorld4(arrayPopulation[3])]
+*/
+//you can do it like this its cleaner if there big. 
+const percentages = [
+    percentageOfWorld4(arrayPopulation[0]),
+    percentageOfWorld4(arrayPopulation[1]),
+    percentageOfWorld4(arrayPopulation[2]),
+    percentageOfWorld4(arrayPopulation[3])
+]
+console.log(percentages)
 
 /*
 LECTURE: Basic Array Operations (Methods)
