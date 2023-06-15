@@ -38,3 +38,78 @@ Apply this to the team's average scores
  
  */
 'use strict';
+
+/*
+const scoreDolphins = calcAverage(85, 54, 41);
+console.log(scoreKoalas);
+
+const scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreKoalas);
+*/
+
+
+const calcAverage = (score1, score2, score3) => {
+    const avgScore = ((score1 + score2 + score3) / 3);
+    return avgScore;
+}
+
+//or 
+/*
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+   
+}
+
+*/
+
+
+/*
+const scoreDolphins = calcAverage(44, 23, 71);
+console.log(scoreDolphins);
+
+const scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreKoalas);
+*/
+
+let scoreDolphins = calcAverage(44, 23, 71);
+console.log(scoreDolphins);
+
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreKoalas);
+
+
+
+
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+
+    if (avgDolphins >= (2 * avgKoalas)) {
+        return `Dolphins win (${avgDolphins} vs ${avgKoalas})`;
+        //or console.log()
+        //no return ? idk why but like wtf?  
+    } else if (avgKoalas >= (2 * avgDolphins)) {
+        return `Koalas win (${avgKoalas} vs ${avgDolphins})`;
+
+    } else {
+        return `no team wins!`;
+
+    }
+}
+
+
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+//or
+// const winnerCheck = checkWinner(scoreDolphins, scoreKoalas));
+//console.log(winnerCheck)
+scoreDolphins = calcAverage(85, 54, 41);
+console.log(scoreDolphins);
+
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreKoalas);
+
+
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+
+/*
+const checkTheWinner2 = checkWinner(scoreDolphins, scoreDolphins);
+console.log(checkTheWinner2);
+*/
