@@ -427,6 +427,58 @@ console.log(percentages);
 //video 40 Basic Array Operations
 
 
+//adding
+const friendsArray = [`Jeff`, `Michelle`, `Lino`];
+
+const newLength = friendsArray.push(`Jay`); //adds it to the end. 
+
+
+
+console.log(friendsArray);
+
+console.log(newLength);
+
+friendsArray.unshift('Freddy Mercury'); //start of the array 
+console.log(friendsArray);
+
+
+//removing 
+
+friendsArray.pop() //removes last one and dont need info at in the ()
+const popped = friendsArray.pop() // remove another 
+
+console.log(friendsArray);
+console.log(popped); //see what you just removed. 
+
+friendsArray.shift();//removes the first one
+console.log(friendsArray);
+
+console.log(friendsArray.indexOf(`Michelle`)); //1
+
+console.log(friendsArray.indexOf(`Jeff`)); //0
+
+
+//ES6 WAY
+friendsArray.push(7); //add 7
+friendsArray.push(`jeff`); //add 7
+console.log(friendsArray.includes(`Lino`)); //false
+console.log(friendsArray.includes(`Jay`)); //false cuz they aint in there
+
+
+console.log(friendsArray.includes(`7`)); //false cuz string
+console.log(friendsArray.includes(7)); //true cuz its the number
+console.log(friendsArray);
+if (friendsArray.includes(`deff` || `jeff`)) {
+    console.log(`You have a friend named ${friendsArray[0]}. `)//Jeff
+} else {
+    console.log(`You don't have friend named ${friendsArray[0]}`)
+}
+
+//
+
+
+
+
 
 
 
@@ -448,6 +500,62 @@ If the 'neighbours' array does not include the countr ‘Germany’, log to the 
 Change the name of one of your neighbouring countries. To do that, find the index of the country in the 'neighbours' array and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.
 
 */
+
+//1
+
+const neighbors = [`USA`, `Cananda`, `Mexico`]; //no u
+
+console.log(neighbors);
+
+
+//2
+
+neighbors.push(`Utopia`);
+
+console.log(neighbors);
+
+
+//3
+
+neighbors.pop();
+
+console.log(neighbors);
+
+//4
+
+//not equal. 
+if (neighbors != `Germany`) {
+    console.log(`Probs not Europe`);
+
+}
+
+// OR 
+
+//not include 
+if (!neighbors.includes(`Germany`)) {
+    console.log(`Probs not Europe`);
+}
+
+
+
+
+//5
+
+neighbors[1] = 'Change';
+
+console.log(neighbors);
+
+//ORRR
+
+neighbors[neighbors.indexOf('USA')] = 'United States of America';
+
+console.log(neighbors);
+
+//doneee
+
+
+
+
 
 /*
 LECTURE: Introduction to Objects
