@@ -113,3 +113,4 @@ console.log(checkWinner(scoreDolphins, scoreKoalas));
 const checkTheWinner2 = checkWinner(scoreDolphins, scoreDolphins);
 console.log(checkTheWinner2);
 */
+
