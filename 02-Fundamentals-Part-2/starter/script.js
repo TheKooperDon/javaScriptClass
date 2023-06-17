@@ -422,10 +422,16 @@ const percentages = [
     percentageOfWorld4(arrayPopulation[2]),
     percentageOfWorld4(arrayPopulation[3])
 ]
-console.log(percentages)
+console.log(percentages);
+
+//video 40 Basic Array Operations
+
+
+
+
 
 /*
-LECTURE: Basic Array Operations (Methods)
+40 LECTURE: Basic Array Operations (Methods)
 1. 
 Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called 'neighbours'
 
