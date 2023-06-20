@@ -588,7 +588,7 @@ Create an object called 'myCountry' for a country of your choice, containing pro
 
 const myCountryVideo42 = {
     country: `USA`,
-    captial: `Capital`,
+    captial: `DC`,
     language: `English`,
     population: `330`,
     neighbors: [`Cananda`, `Mexico`, `Blah`]
@@ -612,6 +612,43 @@ console.log(jonasVideo42[`lastName`]);
 //another way. to do it . but this is good for math stuff
 
 
+const nameKey = `Name`;
+console.log(jonasVideo42[`last` + nameKey]); //= lastName 
+
+//cant do this below
+//console.log(jonas.`last` + nameKey);
+
+//use dot for most things unless math basically .
+
+const intrestedIn = prompt(`What do you want to know about Jeff? Choose between firstName, lastName, age, job, friends`);
+
+
+console.log(jonasVideo42[intrestedIn]);
+//look up this is good for the math 
+//we also dont have intrestedIn in the object also 
+//so it needs to be in a  []
+
+if (jonasVideo42[intrestedIn]) {
+    console.log(jonasVideo42[intrestedIn]);
+} else {
+    console.log('Wrong Request: Choose between firstName, lastName, age, job, friends ')
+}
+
+jonasVideo42.location = `Mexico`;
+jonasVideo42[`twitter`] = `@valodinejr`;
+
+//thats how you add more things in object. 
+
+console.log(jonasVideo42);
+
+//challenge 
+//jonas has 3 friends and his best friend is Lino.
+
+console.log(`${jonasVideo42.firstName} ${jonasVideo42.lastName} has 3 friends and his best friend is ${jonasVideo42.friends[1]}.`);
+//forgot the length damn it .
+
+console.log(`${jonasVideo42.firstName} ${jonasVideo42.lastName} has ${jonasVideo42.friends.length} friends and his best friend is ${jonasVideo42.friends[1]}.`);
+
 
 /*
 LECTURE: Dot vs. Bracket Notation
@@ -622,6 +659,24 @@ Using the object from the previous assignment, log a string like this to the con
 Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation.
 
 */
+console.log(`${myCountryVideo42.country} has ${myCountryVideo42.population} million ${myCountryVideo42.language} speaking people ${myCountryVideo42.neighbors.length} neighbor countries and a captial called ${myCountryVideo42.captial}.`)
+
+console.log(myCountryVideo42.population);
+myCountryVideo42.population = 600;
+
+console.log(myCountryVideo42.population);
+
+myCountryVideo42[`population`] = 600 - 300;
+
+//right way for the seocnd part 
+
+myCountryVideo42.population += 2;
+
+myCountryVideo42[`population`] -= 2;
+
+
+
+//done
 
 /*
 LECTURE: Object Methods
