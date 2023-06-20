@@ -553,6 +553,28 @@ console.log(neighbors);
 
 //doneee
 
+//video 42 Objects
+
+const jonasArray = [
+    `Jonas`,
+    `Blahblah`,
+    2023 - 1996,
+    `teacher`,
+    [`Jeff`, `Huh`, `Boogers`]
+
+
+];
+
+const jonasVideo42 = {
+    firstName: `Jeff`,
+    lastName: `Valodine`,
+    age: 2023 - 1996,
+    job: `web designer`,
+    friends: [`Jeff`, `Huh`, `Boogers`]
+}
+
+//this object has 5 properties.
+//There are multiple ways to create objects
 
 
 
@@ -563,6 +585,33 @@ LECTURE: Introduction to Objects
 Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
 
 */
+
+const myCountryVideo42 = {
+    country: `USA`,
+    captial: `Capital`,
+    language: `English`,
+    population: `330`,
+    neighbors: [`Cananda`, `Mexico`, `Blah`]
+}
+//done
+
+
+
+//video 43
+
+//lets see our object from the last video
+
+console.log(jonasVideo42);
+
+console.log(jonasVideo42.lastName);
+//that just says Valodine
+//not lastName: Valodine like in the first one
+
+
+console.log(jonasVideo42[`lastName`]);
+//another way. to do it . but this is good for math stuff
+
+
 
 /*
 LECTURE: Dot vs. Bracket Notation
