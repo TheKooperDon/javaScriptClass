@@ -678,6 +678,24 @@ myCountryVideo42[`population`] -= 2;
 
 //done
 
+//Lecture Object Methods
+
+const jeffVideo44 = {
+    firstName: `Jeff`,
+    lastName: `Valodine`,
+    birthYear: `1996`,
+    job: `student`,
+    friends: [`Michelle`, `Lino`, `Fred`],
+    hasDriversLicense: true,
+
+
+    calcAge: function (birthYear) {
+        return 2023 - birthYear
+    }
+};
+
+
+
 /*
 LECTURE: Object Methods
 
