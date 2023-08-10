@@ -785,13 +785,125 @@ console.log(myCountryVideo44);
 //the console logs didnt make sense but i get why I should have seen if if neighbors === 0 means yes. 
 
 
+//FOR LOOOOOP!!!!
+
+
+console.log(`Lifting weights repetition 1`);
+console.log(`Lifting weights repetition 2`);
+console.log(`Lifting weights repetition 3`);
+console.log(`Lifting weights repetition 4`);
+
+
+
+//thats the ugly way.
+//dont repeat it. 
+
+
+
+//for has 3 parts
+// the first is the counter
+//let rep is the start of the count. 
+//let rep = 1;
+
+//part 2 
+//what happens each time 
+//this checks it to make sure its still less then 10 each time
+//rep <= 10;
+
+
+//part 3
+//increase it by one till it hits 10 starting from the og spot
+//rep++ or rep = rep + 1
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`REP GAINS ${rep}`)
+}
+
 /*
 LECTURE: Iteration: The for Loop
 1. 
 There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'
 
-
 */
+
+for (let voter = 1; voter <= 50; voter++) {
+    console.log(`Voter number ${voter} is currently voting`)
+};
+
+//done 
+
+
+//loop array
+
+const jeffArray = [
+    `Jeff`,
+    `Valodine`,
+    2023 - 1996,
+    `student`,
+    [`Michelle`, `Lino`, `Fred`],
+    27,
+
+];
+
+
+const types = [];
+
+
+
+//no middle makes it infinite. 
+for (let i = 0; i < jeffArray.length; i++) {
+
+    //reading jeff array 
+    console.log(jeffArray[i], typeof jeffArray[i]);
+
+
+    //filling an array. 
+    //types[i] = typeof jeffArray[i];
+    //this should be one to one then compares it againg for 2 and 2 
+
+    types.push(typeof jeffArray[i])
+};
+
+console.log(types);
+
+
+const yearsAug = [1991, 2007, 1969, 2020, 1996];
+const agesAug = [];
+
+for (let i = 0; i < years.length; i++) {
+    agesAug.push(2023 - yearsAug[i]);
+}
+
+console.log(agesAug);
+
+// continue and break
+
+
+//this just shows the string of the jeffArray
+//skips the rest 
+console.log(`--- only strings ---`)
+for (let i = 0; i < jeffArray.length; i++) {
+
+    if (typeof jeffArray[i] !== `string`) continue
+
+    console.log(jeffArray[i], typeof jeffArray[i])
+
+}
+
+console.log(`--- Break with number ---`)
+for (let i = 0; i < jeffArray.length; i++) {
+
+    if (typeof jeffArray[i] !== `number`) break
+
+    console.log(jeffArray[i], typeof jeffArray[i])
+
+}
+
+
+
+
+
+
+
 
 /*
 
@@ -806,6 +918,26 @@ Confirm that 'percentages2' contains exactly the same values as the 'percentages
 
 
 */
+
+//const percentageOfWorld = population => population / 7900 * 100;
+const percentages2 = [];
+
+const arrayPopulation2 = [300, 10, 225, 500];
+const arrayCountry2 = [`USA`, `Mexico`, `Cananda`, `North Korea`];
+
+for (let i = 0; i < arrayPopulation2.length; i++) {
+    //my way
+    //percentages2.push(arrayPopulation2[i] / 7900 * 100)
+
+    //answer from the pdf same thing
+
+    const perc = percentageOfWorld4(arrayPopulation2[i]);
+    percentages2.push(perc);
+}
+
+console.log(percentages2);
+
+
 
 /*
 LECTURE: Looping Backwards and Loops in Loops
