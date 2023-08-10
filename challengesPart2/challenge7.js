@@ -17,3 +17,48 @@ TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 
 
 IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
 */
+
+//challenge 3
+
+const mark = {
+    fullName: `Mark Miller`,
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+/*
+ calcBMI: function () {
+        return this.mass / (this.height * this.height);
+ }
+
+};
+mark.bmi = mark.calcBMI();
+
+So i guess this was wrong and we could make the whole fuction return that bmi thing inside the function. 
+
+*/
+
+
+const john = {
+    fullName: `John Smith`,
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+
+};
+
+
+//const maker = (fullName, mass, height) => {
+
+
+//}
+
+console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName} (${john.bmi})!)`)
