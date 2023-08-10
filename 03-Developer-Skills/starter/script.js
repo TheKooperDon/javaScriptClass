@@ -13,7 +13,8 @@ const mark = {
     height: 1.69,
 
     calcBMI: function () {
-        return `${this.mass / (this.height * this.height)}`
+        `${this.mass / (this.height * this.height)}`;
+        return
     }
 };
 
@@ -33,5 +34,6 @@ console.log
 
 
 //}
-
-console.log(`${john.fullName}'s BMI (${john.calcBMI()} is higher than ${mark.fullName} (${mark.calcBMI()})!)`)
+console.log(john.calcBMI());
+console.log(mark.calcBMI());
+console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName} (${mark.calcBMI()})!)`)
