@@ -62,3 +62,15 @@ const john = {
 //}
 
 console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName} (${john.bmi})!)`)
+
+
+//or 
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName} (${john.bmi})!)`)
+
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})!)`)
+} else {
+    console.log(`They have the same BMI`)
+}
