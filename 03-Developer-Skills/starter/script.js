@@ -5,4 +5,11 @@
 'use strict';
 
 
+//challenge 3
+
+
+const maker = (fullName, mass, height) => {
+
+
+}
 

@@ -620,14 +620,20 @@ console.log(jonasVideo42[`last` + nameKey]); //= lastName
 
 //use dot for most things unless math basically .
 
+/*
+
 const intrestedIn = prompt(`What do you want to know about Jeff? Choose between firstName, lastName, age, job, friends`);
 
+*/
 
-console.log(jonasVideo42[intrestedIn]);
+//console.log(jonasVideo42[intrestedIn]);
+
+
 //look up this is good for the math 
 //we also dont have intrestedIn in the object also 
 //so it needs to be in a  []
 
+/*
 if (jonasVideo42[intrestedIn]) {
     console.log(jonasVideo42[intrestedIn]);
 } else {
@@ -648,7 +654,7 @@ console.log(`${jonasVideo42.firstName} ${jonasVideo42.lastName} has 3 friends an
 //forgot the length damn it .
 
 console.log(`${jonasVideo42.firstName} ${jonasVideo42.lastName} has ${jonasVideo42.friends.length} friends and his best friend is ${jonasVideo42.friends[1]}.`);
-
+*/
 
 /*
 LECTURE: Dot vs. Bracket Notation
@@ -678,6 +684,12 @@ myCountryVideo42[`population`] -= 2;
 
 //done
 
+
+
+
+
+
+
 //Lecture Object Methods
 
 const jeffVideo44 = {
@@ -688,13 +700,38 @@ const jeffVideo44 = {
     friends: [`Michelle`, `Lino`, `Fred`],
     hasDriversLicense: true,
 
-
+    /*
     calcAge: function (birthYear) {
-        return 2023 - birthYear
+        return 2023 - birthYear;
     }
+    */
+    /*
+    calcAge: function () {
+
+        return 2023 - this.birthYear;
+    }
+    */
+
+    // "THIS" is nice if you gad to change jeffVideo44 to jeffVideo45 if its in the parent you would be fine. Less changing stuff. 
+
+    calcAge: function () {
+        this.age = 2023 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} -year old ${jeffVideo44.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license`
+    },
 };
 
 
+
+
+console.log(jeffVideo44.calcAge());
+console.log(jeffVideo44.calcAge());
+console.log(jeffVideo44.calcAge());
+
+console.log(jeffVideo44.getSummary());
 
 /*
 LECTURE: Object Methods
@@ -710,6 +747,43 @@ Add a method called 'checkIsland' to the 'myCountry' object. This method will se
 
 
 */
+
+const myCountryVideo44 = {
+    country: `USA`,
+    capital: `DC`,
+    language: `English`,
+    population: `330`,
+    neighbors: [`Cananda`, `Mexico`, `Blah`],
+
+
+    describeCountry: function () { //(country, population, capitalCity)
+
+        return `${this.country} has ${this.population} million people and its capital city is ${this.capital}.
+        
+        ${this.neighbors.length} are the neighbouring countries`
+        //forgot to use length sorry i took a break on code. 
+
+        //again you do a return here. 
+
+    },
+
+    checkIsland: function () {
+        //return `${this.country} is ${this.island ? `a island` : `not an island`} `
+
+        this.isIsland = this.neighbors.length === 0 ? true : false;
+    }
+
+}
+
+//console.log(myCountryVideo44.describeCountry())
+//console.log(myCountryVideo44.checkIsland())
+myCountryVideo44.describeCountry();
+myCountryVideo44.checkIsland();
+
+console.log(myCountryVideo44);
+
+//the console logs didnt make sense but i get why I should have seen if if neighbors === 0 means yes. 
+
 
 /*
 LECTURE: Iteration: The for Loop
