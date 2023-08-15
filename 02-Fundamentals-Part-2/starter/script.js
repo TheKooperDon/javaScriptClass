@@ -937,6 +937,32 @@ for (let i = 0; i < arrayPopulation2.length; i++) {
 
 console.log(percentages2);
 
+//looping backwards and loops in loops
+
+const jeffArray2 = [
+    `Jeff`,
+    `Valodine`,
+    2023 - 1996,
+    `student`,
+    [`Michelle`, `Lino`, `Fred`],
+    27,
+    true,
+
+];
+
+//0 1 2 3 4....
+//but we want 
+//the -1 is for the reason that arrays start with 0 because theres technically 7 not 0-6. The length makkes it 7
+for (let i = jeffArray2.length - 1; i >= 0; i--) {
+    console.log(i, jeffArray2[i]);
+    console.log(jeffArray2.length);// this makes it 7 
+};
+
+
+
+
+
+
 
 
 /*
