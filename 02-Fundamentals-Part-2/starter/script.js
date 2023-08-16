@@ -933,6 +933,7 @@ for (let i = 0; i < arrayPopulation2.length; i++) {
 
     const perc = percentageOfWorld4(arrayPopulation2[i]);
     percentages2.push(perc);
+
 }
 
 console.log(percentages2);
