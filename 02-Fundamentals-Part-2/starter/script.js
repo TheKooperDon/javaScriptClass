@@ -937,6 +937,8 @@ for (let i = 0; i < arrayPopulation2.length; i++) {
 
 console.log(percentages2);
 
+//done
+
 //looping backwards and loops in loops
 
 const jeffArray2 = [
@@ -958,6 +960,16 @@ for (let i = jeffArray2.length - 1; i >= 0; i--) {
     console.log(jeffArray2.length);// this makes it 7 
 };
 
+for (let exercise = 1; exercise <= 4; exercise++) {
+    console.log(`------ Starting Exercise ${exercise}`);
+
+    //this does it for each excercise. A loop inside a loop. 
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Lifting weight rep ${rep}`)
+    }
+
+}
+
 
 
 
@@ -976,6 +988,86 @@ You will need a loop inside a loop for this. This is actually a bit tricky, so d
 
 */
 
+
+//my way with chat gpt 
+const test = [
+    `What`, `huh`, `see`, `booger`, `fred`, `jeff`, `michelle`, `beans`, `toot`, `yes`
+];
+
+for (let i = 1; i < 10; i++) {
+    console.log(test[i])
+}
+
+
+const listOfNeighbours2 = [
+    [`Canada`, `Mexico`],
+    [`Spain`],
+    [`Norway`, `Sweden`, `Russia`]
+];
+
+
+
+
+console.log(listOfNeighbours2[0], listOfNeighbours2.length);
+
+for (let i = 0; i <= listOfNeighbours2.length - 1; i++) {
+    console.log(`These Are Countries that touch ${listOfNeighbours2[i][0]}`);
+
+
+    for (let miniArray = 1; miniArray <= listOfNeighbours2[i].length - 1; miniArray++) {
+        console.log(`: ${listOfNeighbours2[i][miniArray]}`)
+    }
+}
+
+//the answer 
+
+const listOfNeighbours4 = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia'],
+];
+for (let i = 0; i < listOfNeighbours4.length; i++)
+    for (let y = 0; y < listOfNeighbours4[i].length; y++)
+        console.log(`Neighbour: ${listOfNeighbours4[i][y]}`);
+
+
+
+//while loop.
+
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`REP BY ${rep}`);
+
+
+}
+
+
+
+//same thing just more ways to change it. You dont need to put the let rep = 1 inside of it
+let rep = 1
+while (rep <= 10) {
+    console.log(`WHILE REP BY ${rep}`);
+    rep++
+}
+
+//dice roll random maker!! 
+
+let dice2 = Math.random() * 6;
+console.log(dice2); //this is some whacky .12414 number. 
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+//!== different 
+//if its 6 from the start it does not even start it. 
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`You rolled a 6`)
+}
+
+
+
 /*
 LECTURE: The while Loop
 1. 
@@ -984,3 +1076,28 @@ Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing
 Reflect on what solution you like better for this task: the for loop or the while loop?
 
 */
+
+//old
+const populations5 = [10, 1441, 332, 83];
+const percentages5 = [];
+for (let i = 0; i < populations5.length; i++) {
+    const perc = percentageOfWorld4(populations5[i]);
+    percentages5.push(perc);
+}
+console.log(percentages5);
+
+//end of old to see it 
+
+const populations6 = [10, 1441, 332, 83];
+const percentages6 = [];
+let b = 0
+while (b < populations6.length) {
+    const perc = percentageOfWorld4(populations6[b]);
+    percentages6.push(perc);
+    b++;
+};
+
+console.log(percentages6)
+
+// there about the same.
+

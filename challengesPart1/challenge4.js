@@ -35,4 +35,4 @@ if (bill >= 50 && bill <= 300) {
 
 console.log(bill);
 console.log(tip);
-console.log(bill + tip)
+console.log(bill + tip);
