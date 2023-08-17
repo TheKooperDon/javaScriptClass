@@ -963,7 +963,6 @@ for (let i = jeffArray2.length - 1; i >= 0; i--) {
 
 for (let exercise = 1; exercise <= 4; exercise++) {
     console.log(`------ Starting Exercise ${exercise}`);
-
     //this does it for each excercise. A loop inside a loop. 
     for (let rep = 1; rep <= 5; rep++) {
         console.log(`Lifting weight rep ${rep}`)

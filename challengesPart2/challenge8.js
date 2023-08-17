@@ -1,4 +1,11 @@
-//Challenge 4
+
+
+
+// Remember, we're gonna use strict mode in all scripts now!
+'use strict';
+
+
+
 
 
 /*
@@ -7,11 +14,11 @@ Let's improve Steven's tip calculator even more, this time using loops!
 
 Your tasks:
 
-Create an array called bills containing all 10 test bill values.
+1.Create an array called bills containing all 10 test bill values.
 
-Create empty arrays for the tips and the totals (tips and totals)
+2.Create empty arrays for the tips and the totals (tips and totals).
 
-Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+3. Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
 
 
 
@@ -29,6 +36,59 @@ To calculate the average, divide the sum you calculated before by the length of 
 
 Call the function with the totals array.
 
+*/
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
 
+let tips = [];
+let totals = [];
+console.log(bills);
+console.log(calcTip(bills[1]))
+//for some reason you cant log this 
+//console.log(calcTip(bills))
+
+for (let i = 0; i <= bills.length - 1; i++) {
+    const tipBullshit = calcTip(bills[i]);
+    //console.log(tips);
+    tips.push(tipBullshit);
+
+    console.log(`The Bill is $${bills[i]} and the tip would be are $${tips[i]}.`);
+    //his lazy ass way.
+    //totals.push(tipBullshit + bills[i]);
+    const total = bills[i] + tipBullshit;
+    totals.push(total)
+
+    console.log(`The Bill is $${bills[i]} and the tip would be are $${tips[i]}. So the total would be $${total}`);
+}
+    /*
+     This was dumb too 
+
+    
+    const total = bills[i] + tipBullshit;
+    totals.push(total)
+    console.log(`So then total is $${total} `)
 
 */
+
+
+
+    //NO NOT AT ALL
+    /*
+    for (let d = 10; d <= tips.length; d--) {
+        let blah = tips[d] + bills[d];
+        //tips[d] + bills[d];
+        totals.push(blah);
+        console.log(`So then total is ${totals[d]} `)
+    }
+    */
+
+    //totals.push(total)
+    // totals = tips + bills;
+    //
+
+    //YOU COULD HAVE DONE 
+
+
+//console.log(totals)
