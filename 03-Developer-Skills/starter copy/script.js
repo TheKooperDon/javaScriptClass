@@ -32,3 +32,26 @@ printForeCast(data1);
 printForeCast(data2);
 
 //i did it right but it was like differnt the += makes everthing work better.
+
+/*
+function forecastTemp(TempArray)
+    initial string = '';
+    for each item in array
+        (concatenate to the init string)
+ 
+    return final string
+
+ 
+// Result
+function forecastTemp(tempArray) {
+  let tempStr = '';
+  tempArray.forEach((temp, index) => {
+      tempStr += `... ${temp}ºC in ${index + 1} days `;
+  })
+
+  return tempStr;
+}
+
+console.log(forecastTemp([17, 21, 23]));
+console.log(forecastTemp([12, 5, -5, 0, 4]));
+*/
