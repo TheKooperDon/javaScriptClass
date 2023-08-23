@@ -33,17 +33,36 @@ document.querySelector(`.guess`).value = 23;
 
 //SECRET NUMBER.
 
-const number = Math.random();
-
+const number = Math.trunc(Math.random() * 20) + 1;
+document.querySelector(`.number`).textContent = number;
+//trunc does a thing of not doing a 4.12141 which is the 1 is helpoing
 document.querySelector(`.check`).addEventListener('click', function () {
-  const guess = document.querySelector(`.guess`).value;
+  const guess = Number(document.querySelector(`.guess`).value);
 
-  console.log(guess, typeof guess);
+  //console.log(guess, typeof guess);
 
   if (!guess) {
     document.querySelector(`.message`).textContent = `Please put a number in`;
-  } else {
-    document.querySelector(`.message`).textContent = `Keep guessing`;
+  } else if (guess === number) {
+    document.querySelector(
+      `.message`
+    ).textContent = `You got the number right! Lets goooo`;
+  } else if (guess > 21 && guess > number) {
+    document.querySelector(
+      `.message`
+    ).textContent = `You went above 20. It must be a number less than 20. Guess Lower`;
+  } else if (guess < 0 && guess < number) {
+    document.querySelector(
+      `.message`
+    ).textContent = `You went less than 1. It must be a number greater than 1. Guess Higher`;
+  } else if (guess > number) {
+    document.querySelector(
+      `.message`
+    ).textContent = `To high of a guess. Guess Lower`;
+  } else if (guess < number) {
+    document.querySelector(
+      `.message`
+    ).textContent = `To low of a guess. Guess Higher`;
   }
 });
 //'click' is the event something is happening.
