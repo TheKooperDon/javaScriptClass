@@ -28,5 +28,7 @@ const printForeCast = function (arr) {
 const data1 = [17, 21, 23];
 const data2 = [12, 5, -5, 0, 4];
 
-console.log(printForeCast(data1));
-console.log(printForeCast(data2));
+printForeCast(data1);
+printForeCast(data2);
+
+//i did it right but it was like differnt the += makes everthing work better.
