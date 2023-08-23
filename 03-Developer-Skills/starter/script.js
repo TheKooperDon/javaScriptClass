@@ -32,7 +32,8 @@ const calcTempAmplitude = function (temps) {
   let min = temps[0];
 
   for (let i = 0; i < temperatures.length; i++) {
-    if (temps[i] > max) max = temps[i];
+    const curTemp = temps[i];
+    if (curTemp > max) max = curTemp;
     //if (temps[3] > 3) max =/ 3
     // temps -2 > 3 max=/3
     //we are just going to keep going till its greater then 3
@@ -43,13 +44,69 @@ const calcTempAmplitude = function (temps) {
   }
 
   for (let i = 0; i < temperatures.length; i++) {
-    if (temps[i] < min) min = temps[i];
+    //if (temps[i] < min) min = temps[i];
     //same thing just min now.
-
     //we could just make a var for curTemp = temps[i] to make it better looking but its fine.
   }
   console.log(max, min);
 };
 
 calcTempAmplitude([3, 7, 4, 23]);
+console.log(`temp1`);
 calcTempAmplitude(temperatures); // 17 //-6
+
+const calcTempAmplitude2 = function (temps) {
+  //max = 3
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temperatures.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== `number`) continue; //to check for that error
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+calcTempAmplitude2([3, 7, 4, 23]);
+console.log(`temp2`);
+calcTempAmplitude2(temperatures); // 17 //-6
+
+const amplitude = calcTempAmplitude2(temperatures);
+console.log(amplitude);
+
+//with 2 arrays should we implemetn functionals twice?
+
+//nooo
+
+//2 how to merge twice
+
+//console.log(array3);
+
+calcTempAmplitude([3, 7, 4, 23]);
+console.log(`temp1`);
+calcTempAmplitude(temperatures); // 17 //-6
+
+const calcTempAmplitude3 = function (t1, t2) {
+  //max = 3
+  //const array1 = [`a`, `b`, `c`];
+  //const array2 = [`d`, `e`, `f`];
+  //const array3 = array1.concat(array2);
+  const temps = t1.concat(t2);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temperatures.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== `number`) continue; //to check for that error
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const TempAmplitude3 = calcTempAmplitude3([2, 5, 4], [1, 5, 7]);
+console.log(TempAmplitude3);
