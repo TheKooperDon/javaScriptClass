@@ -34,38 +34,72 @@ document.querySelector(`.guess`).value = 23;
 //SECRET NUMBER.
 
 const number = Math.trunc(Math.random() * 20) + 1;
-document.querySelector(`.number`).textContent = number;
+
+let score = 20;
+let highscore = ``;
 //trunc does a thing of not doing a 4.12141 which is the 1 is helpoing
 document.querySelector(`.check`).addEventListener('click', function () {
   const guess = Number(document.querySelector(`.guess`).value);
-
   //console.log(guess, typeof guess);
-
   if (!guess) {
     document.querySelector(`.message`).textContent = `Please put a number in`;
   } else if (guess === number) {
-    document.querySelector(
-      `.message`
-    ).textContent = `You got the number right! Lets goooo`;
+    // prettier-ignore
+    document.querySelector(`.message`).textContent = `You got the number right! Lets goooo`;
+    document.querySelector(`.number`).textContent = number;
+    highscore = score;
+    document.querySelector(`.highscore`).textContent = highscore;
+    document.querySelector(`body`).style.backgroundColor = `green`;
+    document.querySelector(`.number`).style.width = `30rem`;
   } else if (guess > 21 && guess > number) {
-    document.querySelector(
-      `.message`
-    ).textContent = `You went above 20. It must be a number less than 20. Guess Lower`;
+    if (score > 0) {
+      // prettier-ignore
+      document.querySelector(`.message`).textContent = `You went above 20. It must be a number less than 20. Guess Lower`;
+      score--;
+      document.querySelector(`.score`).textContent = score;
+    } else {
+      document.querySelector(`.message`).textContent = `You lost the game.`;
+    }
   } else if (guess < 0 && guess < number) {
-    document.querySelector(
-      `.message`
-    ).textContent = `You went less than 1. It must be a number greater than 1. Guess Higher`;
+    if (score > 0) {
+      // prettier-ignore
+      document.querySelector(`.message`).textContent = `You went less than 1. It must be a number greater than 1. Guess Higher`;
+      score--;
+      document.querySelector(`.score`).textContent = score;
+    } else {
+      document.querySelector(`.message`).textContent = `You lost the game.`;
+    }
   } else if (guess > number) {
-    document.querySelector(
-      `.message`
-    ).textContent = `To high of a guess. Guess Lower`;
+    if (score > 0) {
+      // prettier-ignore
+      document.querySelector(`.message`).textContent = `To high of a guess. Guess Lower`;
+      score--;
+      document.querySelector(`.score`).textContent = score;
+    } else {
+      document.querySelector(`.message`).textContent = `You lost the game.`;
+    }
   } else if (guess < number) {
-    document.querySelector(
-      `.message`
-    ).textContent = `To low of a guess. Guess Higher`;
+    if (score > 0) {
+      // prettier-ignore
+      document.querySelector(`.message`).textContent = `To low of a guess. Guess Higher`;
+      score--;
+      document.querySelector(`.score`).textContent = score;
+    } else {
+      document.querySelector(`.message`).textContent = `You lost the game.`;
+    }
   }
 });
 //'click' is the event something is happening.
 //.guess is the input of text
 //typeof is like what is it ? a number? a string? a boolian?
 //!guess no guess
+
+document.querySelector(`.again`).addEventListener('click', function () {
+  Number((document.querySelector(`.guess`).textContent = ``));
+  document.querySelector(`.score`).textContent = 20;
+  document.querySelector(`body`).style.backgroundColor = `#222`;
+  document.querySelector(`.message`).textContent = `Start Guessing...`;
+  document.querySelector(`.number`).style.width = `15rem`;
+  document.querySelector(`.number`).textContent = `?`;
+  document.querySelector(`.guess`).value = ``;
+});
