@@ -102,7 +102,7 @@ btnHold.addEventListener('click', function () {
 
     //2 check if its  >=100 end the game or swich player
 
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
       document
@@ -127,9 +127,9 @@ btnHold.addEventListener('click', function () {
 
 //new game
 
-btnNew.addEventListener('click', function () {
-  //this worked even if he does something different
-  /*
+btnNew.addEventListener('click', init);
+//this worked even if he does something different
+/*
   playing = true;
   document.getElementById(`score--${0}`).textContent = 0;
   document.getElementById(`score--${1}`).textContent = 0;
@@ -143,6 +143,4 @@ btnNew.addEventListener('click', function () {
     .querySelector(`.player--${activePlayer}`)
     .classList.add('player--active');
     */
-  //i overthought this way to much
-  init();
-});
+//i overthought this way to much
