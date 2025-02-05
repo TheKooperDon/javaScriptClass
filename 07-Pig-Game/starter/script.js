@@ -120,4 +120,8 @@ btnHold.addEventListener('click', function () {
 
 //new game
 
-btnNew.addEventListener('click', function () {});
+btnNew.addEventListener('click', function () {
+  document.querySelector.(`.score--${1}`).textContent = 0;
+  
+ 
+});
