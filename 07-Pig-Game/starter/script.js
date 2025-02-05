@@ -27,32 +27,44 @@ diceEl.classList.add('hidden'); //we just added that class hidden to it. this al
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  currentScore = 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
 
 // ROLLING DICE FUNCTIONS
 
 btnRoll.addEventListener('click', function () {
-  // 1, generate a random dice
-  const dice = Math.trunc(Math.random() * 6) + 1; //truc removes the .0
-  console.log(dice);
+  if (playing) {
+    // 1, generate a random dice
+    const dice = Math.trunc(Math.random() * 6) + 1; //truc removes the .0
+    console.log(dice);
+    // 2. Display the dice
 
-  // 2. Display the dice
+    diceEl.classList.remove('hidden'); // this removes that hidden css now
 
-  diceEl.classList.remove('hidden'); // this removes that hidden css now
+    diceEl.src = `dice-${dice}.png`; //src is the image thing
 
-  diceEl.src = `dice-${dice}.png`; //src is the image thing
+    // 3. check if rolled 1 if true switch to the next player
 
-  // 3. check if rolled 1 if true switch to the next player
+    if (dice !== 1) {
+      // add dice number to the current score
+      currentScore += dice;
+      //score0El.textContent = currentScore; just saying that worked nvm that was my actually score not current score but same thign
+      // current0El.textContent = currentScore; // better practice and were gonna change this i guess
 
-  if (dice !== 1) {
-    // add dice number to the current score
-    currentScore += dice;
-    //score0El.textContent = currentScore; just saying that worked nvm that was my actually score not current score but same thign
-    // current0El.textContent = currentScore; // better practice and were gonna change this i guess
-
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-    // the reason why its current--${} is because  theres two players so we are just swapping half of it . the -- doesnt mean shit its just what we called them in html
-  } else {
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+      // the reason why its current--${} is because  theres two players so we are just swapping half of it . the -- doesnt mean shit its just what we called them in html
+    } else {
+      switchPlayer();
+    }
+    /*
     // switch player
 
     document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -67,5 +79,40 @@ btnRoll.addEventListener('click', function () {
     player1El.classList.toggle('player--active'); //now it goes to this
 
     //changing the active color
+
+    SINCE REPEATING WE NEED TO MAKE THIS INTO A FUNCTION 
+    */
+  } //dummy this has to be on the way bottom
+});
+
+btnHold.addEventListener('click', function () {
+  if (playing) {
+    //1 add current score
+    scores[activePlayer] += currentScore;
+    //scores[1] = scores[1] + currentScore; is what is above
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+
+    //2 check if its  >=100 end the game or swich player
+
+    if (scores[activePlayer] >= 20) {
+      playing = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      switchPlayer();
+    }
   }
-}); //dummy this has to be on the way bottom
+});
+/*
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  currentScore = 0; 
+  player0El.classList.toggle('player--active'); 
+  player1El.classList.toggle('player--active');
+
+  lmfao dont COPY  CODE 
+  */
