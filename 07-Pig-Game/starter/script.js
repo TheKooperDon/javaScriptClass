@@ -97,6 +97,7 @@ btnHold.addEventListener('click', function () {
 
     if (scores[activePlayer] >= 20) {
       playing = false;
+      diceEl.classList.add('hidden');
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
@@ -116,3 +117,7 @@ btnHold.addEventListener('click', function () {
 
   lmfao dont COPY  CODE 
   */
+
+//new game
+
+btnNew.addEventListener('click', function () {});
