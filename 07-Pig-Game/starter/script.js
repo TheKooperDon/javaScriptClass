@@ -121,7 +121,24 @@ btnHold.addEventListener('click', function () {
 //new game
 
 btnNew.addEventListener('click', function () {
-  document.querySelector.(`.score--${1}`).textContent = 0;
-  
- 
+  //this worked even if he does something different
+  /*
+  playing = true;
+  document.getElementById(`score--${0}`).textContent = 0;
+  document.getElementById(`score--${1}`).textContent = 0;
+  document.getElementById(`current--${0}`).textContent = 0;
+  document.getElementById(`current--${1}`).textContent = 0;
+
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--winner');
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add('player--active');
+    */
+
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
 });
