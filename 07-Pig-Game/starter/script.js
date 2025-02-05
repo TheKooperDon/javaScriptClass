@@ -6,12 +6,16 @@ const score0El = document.querySelector('#score--0');
 const score1El = document.querySelector('#score--1');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
+
+//ELEMENT  IS ID CLASS IS QUEERY HTML WISE
 //we pulling from where we got this image from in the html and we are hidding it with that hidden css thing
 // getting all the other stuff below the dice aka the buttons
 const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
 
 //  STARTING CONDITIONS
 
@@ -50,10 +54,18 @@ btnRoll.addEventListener('click', function () {
     // the reason why its current--${} is because  theres two players so we are just swapping half of it . the -- doesnt mean shit its just what we called them in html
   } else {
     // switch player
+
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
     // we need to now give the score to the top part now
     activePlayer = activePlayer === 0 ? 1 : 0;
 
     //if active player is 0 then we want to change it to 0 we could do the long hand of that .
     //oh boy short hand
+
+    currentScore = 0; // the final reset part
+    player0El.classList.toggle('player--active'); //toggle removes and adds
+    player1El.classList.toggle('player--active'); //now it goes to this
+
+    //changing the active color
   }
-}); //dummy this has to be ont he way bottom
+}); //dummy this has to be on the way bottom
