@@ -1,8 +1,16 @@
 'use strict';
 const button = document.querySelectorAll('.cute-button');
-const jeff = document.querySelectorAll('.jeff');
+const leftButton = button[0];
+const middleButton = button[1];
+const rightButton = button[2];
+
 const jeffFont = document.getElementById('jeffFont');
 
-button.addEventListener('click', function () {
-  jeffFont.style.fontfamily = 'Arial, sans-serif';
+/*leftButton.addEventListener('click', function () {
+  jeffFont.style.fontFamily = 'Arial, sans-serif';
+});
+
+*/
+leftButton.addEventListener('click', function () {
+  console.log('Left button clicked!');
 });
