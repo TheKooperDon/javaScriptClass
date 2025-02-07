@@ -3,8 +3,7 @@ const button = document.querySelectorAll('.cute-button');
 const leftButton = button[0];
 const middleButton = button[1];
 const rightButton = button[2];
-
-const jeffFont = document.getElementById('jeffFont');
+const jeffHeading = document.querySelector('jeffSyle');
 
 /*leftButton.addEventListener('click', function () {
   jeffFont.style.fontFamily = 'Arial, sans-serif';
