@@ -5,14 +5,8 @@ const middleButton = button[1];
 const rightButton = button[2];
 const jeffHeading = document.querySelector('.jeffStyle'); // Correct spelling
 const fontSize = ['10px', '20px', '50px', '100px', '200px'];
-const FontColor = [
-  'color: blue',
-  'color: green',
-  'color: red',
-  'color: yellow',
-];
-const randomFonts = [
-  "Brush Script MT', cursive",
+const fontColors = ['blue', 'green', 'red', 'yellow'];
+const fonts = [
   'Arial, sans-serif',
   'Courier New, monospace',
   'Georgia, serif',
@@ -20,12 +14,14 @@ const randomFonts = [
   'Verdana, sans-serif',
 ];
 
-const randomIndex = Math.floor(Math.random() * randomFonts.length);
-const randomFont = randomFonts[randomIndex];
+const randomFontIndex = Math.floor(Math.random() * fonts.length);
+const randomFont = fonts[randomFontIndex];
 
 const randomFontSizeIndex = Math.floor(Math.random() * fontSize.length);
 const randomFontSize = fontSize[randomFontSizeIndex];
 
+const randomFontColorIndex = Math.floor(Math.random() * fontColors.length);
+const randomFontColors = fontColors[randomFontColorIndex];
 /*leftButton.addEventListener('click', function () {
   jeffFont.style.fontFamily = 'Arial, sans-serif';
 });
@@ -45,11 +41,13 @@ leftButton.addEventListener('click', function () {
 });
 //size
 middleButton.addEventListener('click', function () {
-  console.log('middle button clicked!');
+  //console.log('middle button clicked!');
   jeffHeading.style.fontSize = randomFontSize;
 });
 
 //color
 rightButton.addEventListener('click', function () {
-  console.log('right button clicked!');
+  //jeffHeading.style.console.log('right button clicked!');
+  console.log('color?', randomFontColors);
+  jeffHeading.style.fontcolor = randomFontColors;
 });
