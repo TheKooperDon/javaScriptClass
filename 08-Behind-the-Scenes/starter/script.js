@@ -14,14 +14,6 @@ const fonts = [
   'Verdana, sans-serif',
 ];
 
-const randomFontIndex = Math.floor(Math.random() * fonts.length);
-const randomFont = fonts[randomFontIndex];
-
-const randomFontSizeIndex = Math.floor(Math.random() * fontSize.length);
-const randomFontSize = fontSize[randomFontSizeIndex];
-
-const randomFontColorIndex = Math.floor(Math.random() * fontColors.length);
-const randomFontColors = fontColors[randomFontColorIndex];
 /*leftButton.addEventListener('click', function () {
   jeffFont.style.fontFamily = 'Arial, sans-serif';
 });
@@ -29,6 +21,9 @@ const randomFontColors = fontColors[randomFontColorIndex];
 */
 //fonts
 leftButton.addEventListener('click', function () {
+  const randomFontIndex = Math.floor(Math.random() * fonts.length);
+  const randomFont = fonts[randomFontIndex];
+
   console.log('Left button clicked!');
   //jeffHeading.style.fontFamily = 'arial';
   jeffHeading.style.fontFamily = randomFont;
@@ -41,6 +36,8 @@ leftButton.addEventListener('click', function () {
 });
 //size
 middleButton.addEventListener('click', function () {
+  const randomFontSizeIndex = Math.floor(Math.random() * fontSize.length);
+  const randomFontSize = fontSize[randomFontSizeIndex];
   //console.log('middle button clicked!');
   jeffHeading.style.fontSize = randomFontSize;
 });
@@ -48,6 +45,8 @@ middleButton.addEventListener('click', function () {
 //color
 rightButton.addEventListener('click', function () {
   //jeffHeading.style.console.log('right button clicked!');
+  const randomFontColorIndex = Math.floor(Math.random() * fontColors.length);
+  const randomFontColors = fontColors[randomFontColorIndex];
   console.log('color?', randomFontColors);
-  jeffHeading.style.fontcolor = randomFontColors;
+  jeffHeading.style.color = randomFontColors;
 });
