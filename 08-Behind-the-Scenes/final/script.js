@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 ///////////////////////////////////////
 // Scoping in Practice
 
@@ -125,7 +125,7 @@ f();
 // Regular Functions vs. Arrow Functions
 // var firstName = 'Matilda';
 
-const jonas = {
+const  = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
@@ -223,3 +223,4 @@ jessicaCopy.family.push('John');
 
 console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
+*/
