@@ -23,7 +23,7 @@ const firstName = 'Jeff';
 calcAge(1996); 
 
 */
-
+/*
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -47,3 +47,20 @@ const jeff = {
 
 jeff.calcAge = parker.calcAge;
 jeff.calcAge();
+*/
+var firstName = 'Jeff';
+
+const jeff = {
+  firstName: 'Jeff',
+  year: 1996,
+  calcAge: function () {
+    console.log(this);
+    console.log(2025 - this.year);
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+jeff.greet();
