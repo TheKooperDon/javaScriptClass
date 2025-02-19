@@ -48,14 +48,44 @@ const jeff = {
 jeff.calcAge = parker.calcAge;
 jeff.calcAge();
 */
-var firstName = 'Jeff';
-
+/*
 const jeff = {
   firstName: 'Jeff',
   year: 1996,
+
   calcAge: function () {
-    console.log(this);
     console.log(2025 - this.year);
+    const self = this;
+    const isMillenial = function () {
+      console.log(self);
+      console.log(self.year >= 1981 && self.year <= 1996);
+      //console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: function () {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+jeff.greet();
+jeff.calcAge();
+
+*/
+/*
+const jeff = {
+  firstName: 'Jeff',
+  year: 1996,
+
+  calcAge: function () {
+    console.log(2025 - this.year);
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
 
   greet: () => {
@@ -64,3 +94,11 @@ const jeff = {
   },
 };
 jeff.greet();
+jeff.calcAge();
+
+*/
+
+const addExpr = function (a, b) {
+  console.log(arguements);
+  return a + b;
+};
