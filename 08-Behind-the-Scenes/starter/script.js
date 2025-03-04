@@ -135,7 +135,7 @@ const michelle = {
 
 //shallow so shallow
 const michelleCopy = { ...michelle }; // i guess the ... takes from the name and makes a new object
-
+/*
 michelleCopy.lastName = 'Valodine';
 console.log(michelle, michelleCopy);
 michelleCopy.family.push('Marilee');
@@ -145,9 +145,13 @@ michelleCopy.family.push('Katie');
 
 console.log('Before:', michelle);
 console.log('After:', michelleCopy);
-
+*/
 //deep copy and new and this is what should you do
 
 const michelleClone = structuredClone(michelle);
+
+michelleClone.family.push('Marilee');
+michelleClone.family.push('Katie');
+
 console.log('Before clone:', michelle);
 console.log('After clone:', michelleClone);
