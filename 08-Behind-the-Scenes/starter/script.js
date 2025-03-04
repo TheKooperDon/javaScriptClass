@@ -96,9 +96,23 @@ const jeff = {
 jeff.greet();
 jeff.calcAge();
 
-*/
+
 
 const addExpr = function (a, b) {
   console.log(arguements);
   return a + b;
 };
+
+*/
+//honestly just skipping this stuff to get to the next lesson
+
+const michelle = {
+  firstName: 'Michelle',
+  lastName: 'Stevens',
+  age: 30,
+};
+
+const marriedJeff = michelle;
+marriedJeff.lastName = 'Valodine';
+
+console.log('Before', michelle);
