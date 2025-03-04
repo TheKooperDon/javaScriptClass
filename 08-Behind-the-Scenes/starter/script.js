@@ -106,13 +106,48 @@ const addExpr = function (a, b) {
 */
 //honestly just skipping this stuff to get to the next lesson
 
-const michelle = {
+const michelle2 = {
   firstName: 'Michelle',
   lastName: 'Stevens',
   age: 30,
 };
 
-const marriedJeff = michelle;
-marriedJeff.lastName = 'Valodine';
+function marryPerson(ogPerson, newLastName) {
+  ogPerson.lastName = newLastName;
+  return ogPerson;
+}
+const marriedMichelle = marryPerson(michelle2, 'Valodine');
 
-console.log('Before', michelle);
+//const marriedMichelle = michelle;
+//marriedMichelle.lastName = 'Valodine';
+
+console.log('Before', michelle2);
+// this was already changed so its auto valodine here but we did change a const
+// same as a function same thing would happen
+console.log('After:', marriedMichelle);
+
+const michelle = {
+  firstName: 'Michelle',
+  lastName: 'Stevens',
+  age: 30,
+  family: ['Wayne', 'Lisa'],
+};
+
+//shallow so shallow
+const michelleCopy = { ...michelle }; // i guess the ... takes from the name and makes a new object
+
+michelleCopy.lastName = 'Valodine';
+console.log(michelle, michelleCopy);
+michelleCopy.family.push('Marilee');
+michelleCopy.family.push('Katie');
+
+//family is a new object so we need to do the same thing probs with michellecopy aka shallow copy aka basic asf
+
+console.log('Before:', michelle);
+console.log('After:', michelleCopy);
+
+//deep copy and new and this is what should you do
+
+const michelleClone = structuredClone(michelle);
+console.log('Before clone:', michelle);
+console.log('After clone:', michelleClone);
