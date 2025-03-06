@@ -196,5 +196,17 @@ const books = [
   console.log(rating, ratingsCount);
 //4
 const ratingStars = [63405, 1808];
-const fiveStarRatings = []
+let [oneStarRating, twoStarRating, ThreeStarRating = 0 ] = ratingStars;
+const fiveStarRatings = ratingStars;
+console.log(ratingStars);
 
+
+
+//fiveStarRatings 
+
+/*
+
+const [p, q, r] = [8, 9];
+console.log(p, q, r)
+
+*/
