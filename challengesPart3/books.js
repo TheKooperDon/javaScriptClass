@@ -183,6 +183,18 @@ const books = [
   ];
 
   console.log('test')
+  //1
+  let [firstBook, secondBook] = books;
 
-  let [firstBook, secondBook] = books.title;
-  console.log(firstBook, secondBook);
+  //2
+  let [, , thirdBook] = books;
+
+  //3
+  const ratings = [['rating', 4.19], ['ratingsCount', 144584]];
+
+  let [[,rating], [,ratingsCount]] = ratings;
+  console.log(rating, ratingsCount);
+//4
+const ratingStars = [63405, 1808];
+const fiveStarRatings = []
+
