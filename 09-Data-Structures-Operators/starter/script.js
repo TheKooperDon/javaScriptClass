@@ -24,7 +24,7 @@ const flights =
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
+  name1: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
@@ -50,16 +50,38 @@ const restaurant = {
 
   },
 
+  orderDelivery: function(obj){
+
+  },
+
    
 };
 
-const {name, openingHours, categories} = restaurant;
+const {name1, openingHours, categories} = restaurant;
 
-console.log(name, openingHours, categories);
+console.log(name1, openingHours, categories);
 
-const {name: restaurantName, openingHours: hours, categories: tags} = restaurant;
+const {name1: restaurantName, openingHours: hours, categories: tags} = restaurant;
 // since menu doesnt have anything yet its why we do the [] so at least its defined starter menu does have info
 const {menu = [], starterMenu: starters = []} = restaurant;
+console.log(menu, starters);
+
+//Mutating vers
+
+let a = 111;
+let b = 999;
+const obj = {a: 23, b: 7, c:14};
+
+({a,b} = obj);
+console.log(a, b);
+
+// Nest objects
+
+const {
+  fri:{open, close}
+} = openingHours;
+console.log(open, close);
+
 
 
 
