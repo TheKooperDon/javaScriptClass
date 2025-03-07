@@ -182,6 +182,10 @@ const books = [
     }
   ];
 
+
+ // Destructuring Arrays
+
+  /*
   console.log('test')
   //1
   let [firstBook, secondBook] = books;
@@ -210,3 +214,5 @@ const [p, q, r] = [8, 9];
 console.log(p, q, r)
 
 */
+
+// Destructuring Objects
