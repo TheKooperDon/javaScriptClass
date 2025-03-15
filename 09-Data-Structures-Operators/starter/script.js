@@ -63,27 +63,30 @@ console.log(name1, openingHours, categories);
 
 const {name1: restaurantName, openingHours: hours, categories: tags} = restaurant;
 // since menu doesnt have anything yet its why we do the [] so at least its defined starter menu does have info
+
+
+//default vals
 const {menu = [], starterMenu: starters = []} = restaurant;
 console.log(menu, starters);
 
-//Mutating vers
+//Mutating vars
 
 let a = 111;
 let b = 999;
 const obj = {a: 23, b: 7, c:14};
 
+//we need to do the () to do this from some reason no {} allowed 
 ({a,b} = obj);
 console.log(a, b);
 
 // Nest objects
 
 const {
-  fri:{open, close}
+  fri:{open: o, close: c}
 } = openingHours;
-console.log(open, close);
+console.log(o, c);
 
-
-
+//
 
 
 
