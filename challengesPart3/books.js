@@ -216,3 +216,15 @@ console.log(p, q, r)
 */
 
 // Destructuring Objects
+
+
+
+//the spread operator 
+
+const booksArray = [title, author, ISBN];
+
+const [titleArray, authorArray, ISBNArray] = booksArray;
+
+console.log(titleArray);
+console.log(authorArray);
+console.log(ISBNArray);
