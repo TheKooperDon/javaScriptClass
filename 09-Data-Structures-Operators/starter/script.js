@@ -54,6 +54,9 @@ const restaurant = {
     console.log(`Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deleivered to ${address} at ${time}`);
     },
 
+    orderPasta: function(ing1, ing2, ing3){
+      console.log(`here yo pasta with ${ing1}, ${ing2}, ${ing3}`);
+    }
    
 };
 
@@ -100,8 +103,64 @@ console.log(o, c);
 
 //
 
+const arr = [7, 8, 9];
+const badNewArr = [1,2, arr[0], arr[1], arr[2]];
+console.log(badNewArr); 
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
 
 
+
+//copy array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join 2 arrays
+
+const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu]; 
+
+
+//not objects
+
+const str = 'jeff';
+const letters = [...str, '', 'J']
+console.log(letters);
+console.log(...str);
+
+
+
+//real world example
+
+//const ingredients = [prompt('Lets\'s make pasta! Ingredient 1?' ), prompt('Ingredient 2?'), prompt('ingredient 3?')];
+//console.log(ingredients);
+
+//restaurant.orderPasta(...ingredients); ///...adds them 
+
+// objects
+
+
+const newResturant = {foundedIn: 1996, ...restaurant, founder: 'jeff'};
+console.log(newResturant);
+
+const restaurantCopy = {...restaurant};
+restaurantCopy.name1 = 'bob';
+console.log(restaurantCopy.name1);
+console.log(restaurant.name1);
+
+
+//video 110
+//spread on the right
+const arr1 = [1, 2, ...[3, 4]];
+
+
+//rest on the left 
+const [a,b,...others] = [1,2,3,4,5];
+
+console.log(a,b, others);
 
 
 
